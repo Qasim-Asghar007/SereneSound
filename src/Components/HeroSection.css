@@ -1,0 +1,123 @@
+:root {
+  --primary: #6a5acd;
+  --secondary: #9370db;
+  --accent: #ba55d3;
+  --light: #e6e6fa;
+  --dark: #4b0082;
+  --success: #98fb98;
+  --warning: #ffd700;
+  --danger: #ff6b6b;
+}
+
+.Hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(circle, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  height: auto;
+  min-height: 150vh;
+  padding-top: 35vh;
+}
+
+.hero-heading {
+  text-align: center;
+  width: 100%;
+}
+
+.gradient-text {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  color: #6a5acd; /* Using the purple color from your gradient */
+}
+
+
+
+
+.Quick-guide {
+  text-align: center;
+  background: linear-gradient(45deg, var(--light), var(--accent));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.hero-content {
+  margin-bottom: 25vh;
+}
+
+.hero-content p {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, var(--light), var(--accent));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+.hero-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #8a3d9d9b;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  height: 40vh;
+  width: 250px;
+  animation: floatCard 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.card-container:hover {
+  animation: none;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  background-color: #d369eea2;
+  z-index: 1;
+  position: relative;
+}
+
+.card-image {
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 20vh;
+  height: 20vh;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-container:hover {
+    transform: none;
+    background-color: #8a3d9d9b;
+  }
+}

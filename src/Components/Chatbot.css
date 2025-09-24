@@ -1,0 +1,338 @@
+:root {
+  --primary: #6a5acd;
+  --secondary: #9370db;
+  --accent: #ba55d3;
+  --light: #e6e6fa;
+  --dark: #4b0082;
+  --success: #98fb98;
+  --warning: #ffd700;
+  --danger: #ff6b6b;
+}
+
+.Chatbot-section {
+  background: radial-gradient(circle, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100dvh;
+  padding: 2rem;
+  color: white;
+}
+
+.chatbot-container {
+  margin-top: 40px; 
+  display: flex;
+  flex-direction: column;
+  height: 85vh; 
+  min-height: 85vh; 
+  background: rgba(46, 45, 45, 0.315);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: visible;
+  padding: 0.5rem; 
+}
+
+.chatbot-header {
+  padding: 0.75rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem; 
+  background-color: rgba(22, 16, 29, 0.484);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(40px);
+}
+.chatbot-title {
+  font-size: 1.8rem; 
+}
+.chatbot-description {
+  font-size: 0.95rem; 
+}
+
+.chat-area {
+  padding: 0.75rem; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 0.6rem; 
+}
+
+.pre-prompts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; 
+  margin-top: 0.25rem; 
+  width: 100%;
+}
+
+.pre-prompts > .prompt-pill:nth-child(1),
+.pre-prompts > .prompt-pill:nth-child(4) {
+  width: auto;
+  max-width: 85%; 
+  text-align: center;
+  border-radius: 18px; 
+  padding: 8px 14px; 
+}
+
+.middle-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem; 
+  flex-wrap: wrap;
+  border-radius: 18px;
+  padding: 8px 14px; 
+}
+
+.middle-row .prompt-pill {
+  width: auto;
+  max-width: 45%; 
+  text-align: center;
+}
+
+.prompt-pill {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 10px 20px; 
+  border-radius: 18px; 
+  font-size: 0.82rem; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(186, 85, 211, 0.2);
+}
+
+.prompt-pill:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px) scale(1.03); 
+  box-shadow: 0 4px 10px rgba(106, 90, 205, 0.3);
+}
+
+.text-area {
+  margin-top: 0; 
+  width: 100%;
+}
+.text-area-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  background-color: transparent;
+  border-radius: 16px; 
+  padding: 8px; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); 
+  backdrop-filter: blur(8px); 
+  position: relative;
+  z-index: 2;
+  height: 100px; 
+}
+
+.chat-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: white;
+  font-size: 0.95rem; 
+  min-height: 50px; 
+  padding: 6px; 
+  line-height: 1.4; 
+}
+
+.send-btn {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  font-size: 1.1rem; 
+  padding: 8px 10px; 
+  margin-left: 6px; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+}
+.send-btn:hover {
+  background-color: var(--primary);
+  transform: scale(1.05); 
+}
+
+.custom-shape-divider-bottom-1755525492 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.custom-shape-divider-bottom-1755525492 svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 180px;
+}
+
+.custom-shape-divider-bottom-1755525492 .shape-fill {
+  fill: #695acd34;
+}
+
+.Chatbot-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px; 
+  z-index: 0; 
+}
+
+.messages,
+.message,
+.message *, 
+.chat-input,
+.prompt-pill {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; 
+  overflow-y: auto;
+  flex: 1; 
+  padding-bottom: 10px; 
+}
+
+.message {
+  max-width: 80%; 
+  padding: 10px 14px; 
+  border-radius: 14px; 
+  line-height: 1.45; 
+  word-wrap: break-word;
+  font-size: 0.92rem; 
+  box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.15); 
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  border-bottom-left-radius: 3px;
+}
+
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 3px; 
+  padding: 8px 12px; 
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.typing span {
+  width: 5px; 
+  height: 5px; 
+  border-radius: 50%;
+  animation: blink 1.2s infinite both; 
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes blink {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .Chatbot-section {
+    padding: 1.5rem 1rem; 
+    min-height: 95dvh;
+  }
+
+  .chatbot-container {
+    margin-top: 30px; 
+    padding: 0.3rem; 
+    height: 80vh; 
+    min-height: 88vh;
+  }
+
+  .chatbot-header {
+    margin-bottom: 0.5rem; 
+    padding: 0.5rem;
+  }
+
+  .chatbot-title {
+    font-size: 1.6rem;
+  }
+
+  .chat-area {
+    padding: 0.5rem; 
+  }
+
+  .text-area-bottom {
+    height: 90px; 
+    padding: 6px;
+  }
+
+  .chat-input {
+    min-height: 45px;
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+  .send-btn {
+    padding: 7px 9px;
+    font-size: 1rem;
+  }
+
+  .pre-prompts {
+    margin-top: 0.15rem;
+  }
+
+  .prompt-pill {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+
+  .middle-row {
+    gap: 0.7rem;
+  }
+}

@@ -1,0 +1,188 @@
+* {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6a5acd;
+  --secondary: #9370db;
+  --accent: #ba55d3;
+  --light: #e6e6fa;
+  --dark: #4b0082;
+  --success: #98fb98;
+  --warning: #ffd700;
+  --danger: #ff6b6b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(26, 27, 49, 0.401);
+  position: fixed;
+  min-width: 30vh;
+  width: 100%;
+  z-index: 10000;
+}
+
+.logo-icons {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  perspective: 400px;
+  transform-style: preserve-3d;
+}
+.logo-icons .fa-moon,
+.logo-icons .fa-peace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+@keyframes roll-in-out {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to the icons */
+.logo-icons .fa-moon {
+  animation: roll-in-out 4s infinite;
+}
+
+.logo-icons .fa-peace {
+  animation: roll-in-out 4s infinite;
+  animation-delay: 2s; /* This ensures the peace icon starts its animation when the moon's is half-way through */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  padding-left: 10px;
+  background: linear-gradient(45deg, var(--secondary), var(--accent));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes roll {
+}
+
+.fa-moon {
+  color: var(--primary);
+}
+.fa-peace {
+  color: var(--primary);
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar .nav-links li {
+  padding: 0 15px;
+}
+
+.navbar .nav-links a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.navbar .nav-links a:hover {
+  cursor: pointer;
+  color: var(--primary);
+  background-color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links a.active {
+  background: rgba(147, 112, 219, 0.2);
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 960px) {
+  .navbar .fa-close {
+    display: none;
+  }
+
+  .navbar .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 27, 49, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar .nav-links.active li {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+
+
+  .navbar .nav-links.active li a {
+    display: hide;
+    margin: 5px 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.6rem;
+  }
+  .navbar.open .fa-bars {
+    display: none;
+  }
+  .navbar.open .fa-close {
+    display: block;
+  }
+}
