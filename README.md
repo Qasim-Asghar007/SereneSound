@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+This project was built to explore modern front-end technologies and create a functional application centered around mental wellness. The goal was to build a secure, performant, and user-friendly platform where users can relax with ASMR sounds, interact with an intelligent chatbot for quick queries, and browse profiles of registered professionals for online consultations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A key architectural feature is the use of serverless functions to handle API requests to the Gemini API, ensuring that the API key remains secure and is never exposed on the client-side.
 
-## Available Scripts
+Key Features
+🎧 Extensive ASMR Library: A curated collection of high-quality ASMR sounds to help with relaxation, focus, and sleep.
 
-In the project directory, you can run:
+💬 AI-Powered Chatbot: Integrated with the Google Gemini API, the chatbot can answer user questions and provide a conversational experience.
 
-### `npm start`
+👨‍⚕️ Online Wellness Sessions: A dedicated section where users can view profiles of registered doctors and wellness professionals and book consultations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔒 Secure Architecture: API keys are managed securely through serverless functions, which act as a proxy between the client and the AI service.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✨ Responsive Design: A mobile-first approach ensures a seamless experience across all devices.
 
-### `npm test`
+Built With
+React: A JavaScript library for building user interfaces.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Google Gemini API: Powers the intelligent chatbot feature.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Serverless Functions: Used for secure API key management and handling backend logic without a dedicated server.
